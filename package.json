@@ -1,0 +1,24 @@
+{
+  "name": "croc-headless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crocnode1/croc-headless.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crocnode1/croc-headless/issues"
+  },
+  "homepage": "https://github.com/crocnode1/croc-headless#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "zombie": "^6.1.4"
+  }
+}
