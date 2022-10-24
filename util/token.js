@@ -12,12 +12,16 @@ module.exports = function () {
           if (url.includes('_api')) { jsonResponse = request.headers; }
         });
         await browser.visit('https://www.gurufocus.com/pricing', function() {
-          setTimeout(console.log('loaded'), 50000);
+          browser.on('done', function() {
+			delete browser.cookies;
+			browser.cookies = new browser.cookies.constructor();
+			browser.window.close();
+		});
           resolve(jsonResponse);
         });
-        
       })() } catch {
         reject('error');
       }
     })
 }
+
