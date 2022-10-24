@@ -12,7 +12,8 @@ module.exports = function () {
           if (url.includes('_api')) { jsonResponse = request.headers; }
         });
         await browser.visit('https://www.gurufocus.com/pricing', function() {
-          setTimeout(resolve(jsonResponse), 50000);
+          setTimeout(console.log('loaded'), 50000);
+          resolve(jsonResponse);
         });
         
       })() } catch {
